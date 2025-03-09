@@ -30,9 +30,9 @@ const Contact: React.FC = () => {
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.8 }}
           >
-            <h3 className="text-2xl font-bold mb-6">Let's Talk About Your Project</h3>
+            <h3 className="text-2xl font-bold mb-6">Let&apos;s Talk About Your Project</h3>
             <p className="text-gray-700 mb-8">
-              I'm interested in freelance opportunities – especially ambitious or large projects. However, if you have other requests or questions, don't hesitate to contact me using the form.
+              I&apos;m interested in freelance opportunities – especially ambitious or large projects. However, if you have other requests or questions, don&apos;t hesitate to contact me using the form.
             </p>
             
             <div className="space-y-6">
