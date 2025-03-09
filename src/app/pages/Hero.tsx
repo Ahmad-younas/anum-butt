@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Github, Linkedin, Twitter } from 'lucide-react';
 import { Typewriter } from 'react-simple-typewriter';
 import Link from 'next/link';
+import Image from 'next/image';
 const Hero: React.FC = () => {
   return (
     <section id="home" className="min-h-screen flex items-center pt-20 pb-10 relative overflow-hidden">
@@ -62,7 +63,7 @@ const Hero: React.FC = () => {
             className="relative"
           >
             <div className="relative z-10 rounded-full overflow-hidden border-8 border-white shadow-xl max-w-md mx-auto">
-              <img 
+              <Image 
                 src="anumbutt.jpeg"
                 alt="Anum Butt" 
                 className="w-full h-auto"
