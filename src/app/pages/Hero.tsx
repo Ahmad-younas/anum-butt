@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
           >
             <h3 className="text-xl md:text-2xl font-medium mb-2">👋 Hi There,</h3>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-              I'm
+              I&apos;m
               <span className="text-[var(--primary)]">
                  <Typewriter words={[' Solutions Architect', ' Engineering Leader', ' Technology Enthusiast', ' Mentor', ' Trainer']}loop={false}cursor/>
               </span>

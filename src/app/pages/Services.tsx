@@ -73,7 +73,7 @@ const Services: React.FC = () => {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="mt-16 text-center"
         >
-          <p className="text-xl mb-6">Looking for a custom service? I'm here to help you with your specific needs.</p>
+          <p className="text-xl mb-6">Looking for a custom service? I&apos;m here to help you with your specific needs.</p>
           <a href="#contact" className="px-6 py-3 rounded-md font-medium transition-all duration-300 inline-flex items-center gap-2 bg-[var(--primary)] text-white hover:bg-opacity-90">Get In Touch</a>
         </motion.div>
       </div>
