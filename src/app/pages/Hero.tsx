@@ -24,16 +24,12 @@ const Hero: React.FC = () => {
                  <Typewriter words={[' Solutions Architect', ' Engineering Leader', ' Technology Enthusiast', ' Mentor', ' Trainer']}loop={false}cursor/>
               </span>
             </h1>
-            {/* <h2 className="text-2xl md:text-3xl font-medium mb-6">Creative Developer</h2> */}
             
             <p className="text-gray-700 text-lg mb-8 max-w-lg">
              IT professional with 12+ years in software architecture, development, and support, delivering innovative solutions for startups to Fortune 500 companies. Known for analytical skills, attention to detail, and enhancing user functionality.
             </p>
             
             <div className="flex flex-wrap gap-4">
-              {/* <Link href="#contact" className="px-6 py-3 rounded-md font-medium transition-all duration-300 inline-flex items-center gap-2 bg-[var(--primary)] text-white hover:bg-opacity-90">
-                Get In Touch <ArrowRight size={18} />
-              </Link> */}
               <Link href="#about" className="px-6 py-3 rounded-md font-medium transition-all duration-300 inline-flex items-center gap-2 border-2 border-[var(--primary)] text-[var(--primary)] hover:bg-[var(--primary)] hover:text-white">
                 More About Me              
                 </Link>

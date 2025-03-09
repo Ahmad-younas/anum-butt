@@ -6,17 +6,7 @@ import { Download, Award, Calendar, Briefcase } from 'lucide-react';
 import { Anton, Fredoka } from 'next/font/google';
 import Image from 'next/image';
 
-const AntoStatic = Anton({
-  variable: "--font-anton",
-  weight: "400",
-  subsets: ["latin"],
-});
 
-const fredoka = Fredoka({
-  variable: "--font-fredoka",
-  weight: "700",
-  subsets: ["latin"],
-})
 const About: React.FC = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -74,10 +64,10 @@ const About: React.FC = () => {
             A seasoned and dynamic IT Professional with 12+ years of hands-on experience across software architecture, design, development, and production support. I have a solid track record of driving innovation and delivering high-impact solutions for a diverse range of clients, from startups to Fortune 500 companies. Known for my analytical mindset and attention to detail, I excel at enhancing end-user functionality and ensuring project accuracy from start to finish.
             </p>
             <p className="text-gray-700 mb-6">
-            Whether leading complex projects or collaborating within teams, I’m passionate about using technology to solve real-world problems and create scalable, efficient systems that deliver measurable results.
+            Whether leading complex projects or collaborating within teams, I&apos;m passionate about using technology to solve real-world problems and create scalable, efficient systems that deliver measurable results.
             </p>
             <p className="text-gray-700 mb-6">
-            In addition to my professional experience, I’m actively involved in public speaking and mentoring through platforms like ProWomen, where I support and empower other women in tech.
+            In addition to my professional experience, I&apos;m actively involved in public speaking and mentoring through platforms like ProWomen, where I support and empower other women in tech.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
