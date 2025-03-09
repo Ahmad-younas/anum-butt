@@ -1,7 +1,7 @@
 "use client"
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Github, Linkedin, Twitter } from 'lucide-react';
+import {  Github, Linkedin, Twitter } from 'lucide-react';
 import { Typewriter } from 'react-simple-typewriter';
 import Link from 'next/link';
 import Image from 'next/image';

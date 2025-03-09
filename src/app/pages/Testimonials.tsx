@@ -3,7 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Quote } from 'lucide-react';
-
+import Image from 'next/image';
 const Testimonials: React.FC = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -56,7 +56,7 @@ const Testimonials: React.FC = () => {
               </div>
               <p className="text-gray-700 mb-6">{testimonial.text}</p>
               <div className="flex items-center">
-                <img 
+                <Image
                   src={testimonial.image} 
                   alt={testimonial.name} 
                   className="w-14 h-14 rounded-full object-cover mr-4"

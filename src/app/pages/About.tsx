@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Download, Award, Calendar, Briefcase } from 'lucide-react';
 import { Anton, Fredoka } from 'next/font/google';
-
+import Image from 'next/image';
 
 const AntoStatic = Anton({
   variable: "--font-anton",
@@ -54,7 +54,7 @@ const About: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="relative">
-              <img 
+              <Image
                 src="anumbutt.jpeg"
                 alt="About Anum Butt" 
                 className="rounded-lg shadow-xl w-full h-auto"

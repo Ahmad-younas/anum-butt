@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ExternalLink, Plus } from 'lucide-react';
-
+import Image from 'next/image';
 const Portfolio: React.FC = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -103,7 +103,7 @@ const Portfolio: React.FC = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="relative overflow-hidden rounded-lg group"
             >
-              <img 
+              <Image
                 src={item.image} 
                 alt={item.title} 
                 className="w-full h-72 object-cover rounded-lg"
