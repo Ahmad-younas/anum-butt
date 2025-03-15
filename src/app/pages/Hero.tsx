@@ -1,7 +1,7 @@
 "use client"
 import React from 'react';
 import { motion } from 'framer-motion';
-import {  Github, Linkedin, Twitter } from 'lucide-react';
+import {  Github, Linkedin } from 'lucide-react';
 import { Typewriter } from 'react-simple-typewriter';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -21,12 +21,12 @@ const Hero: React.FC = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
               I&apos;m
               <span className="text-[var(--primary)]">
-                 <Typewriter words={[' Solutions Architect', ' Engineering Leader', ' Technology Enthusiast', ' Mentor', ' Trainer']}loop={false}cursor/>
+                 <Typewriter words={[' Senior Solutions Architect', ' Engineering Leader', ' Technology Enthusiast', ' Mentor', ' Trainer']}loop={false}cursor/>
               </span>
             </h1>
             
             <p className="text-gray-700 text-lg mb-8 max-w-lg">
-             IT professional with 12+ years in software architecture, development, and support, delivering innovative solutions for startups to Fortune 500 companies. Known for analytical skills, attention to detail, and enhancing user functionality.
+             IT professional with 13+ years in software architecture, development, and support, delivering innovative solutions for startups to Fortune 500 companies. Known for analytical skills, attention to detail, and enhancing user functionality.
             </p>
             
             <div className="flex flex-wrap gap-4">
@@ -45,9 +45,6 @@ const Hero: React.FC = () => {
                 <Link href="https://www.linkedin.com/in/anum-tariq-butt-37b31039/" target='_blank'  className="w-10 h-10 rounded-full bg-light flex items-center justify-center text-[var(--primary)] hover:bg-[var(--primary)] hover:text-white transition-all duration-300">
                   <Linkedin size={18} />
                 </Link>
-                <Link href="#" className="w-10 h-10 rounded-full bg-light flex items-center justify-center text-[var(--primary)] hover:bg-[var(--primary)] hover:text-white transition-all duration-300">
-                  <Twitter size={18} />
-                </Link>
               </div>
             </div>
           </motion.div>
@@ -60,7 +57,9 @@ const Hero: React.FC = () => {
           >
             <div className="relative z-10 rounded-full overflow-hidden border-8 border-white shadow-xl max-w-md mx-auto">
               <Image 
-                src="anumbutt.jpeg"
+                src="/anumbutt.jpeg"
+                width={500}
+                height={500}
                 alt="Anum Butt" 
                 className="w-full h-auto"
               />

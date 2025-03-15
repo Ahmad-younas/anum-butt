@@ -9,11 +9,11 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-lg font-medium mb-4 md:mb-0">
-            © {currentYear} Sarah Johnson. All Rights Reserved.
+            © {currentYear} Anum Butt. All Rights Reserved.
           </p>
           
           <p className="flex items-center">
-            Made with <Heart size={16} className="text-[var(--primary)] mx-1" /> by Sarah Johnson
+            Made with <Heart size={16} className="text-[var(--primary)] mx-1" /> by Anum Butt
           </p>
         </div>
       </div>

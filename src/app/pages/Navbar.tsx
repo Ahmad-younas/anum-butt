@@ -85,33 +85,37 @@ const Navbar: React.FC = () => {
       </header>
       
       {/* Mobile Menu */}
-      <div className={`fixed top-0 right-0 h-screen w-64 bg-white shadow-2xl transform transition-transform duration-300 ease-in-out z-50 p-6 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-        <div className="flex justify-end">
-          <button 
-            onClick={toggleMenu}
-            className="text-[var(--dark)] hover:text-[var(--primary)] transition-colors"
-            aria-label="Close menu"
-          >
-            <X size={24} />
-          </button>
+      {isMenuOpen && (
+        <div className="fixed inset-0 z-50">
+          <div className="fixed inset-y-0 right-0 w-64 bg-white shadow-lg p-6 transform transition-transform duration-300">
+            <div className="flex justify-end">
+              <button 
+                onClick={toggleMenu}
+                className="text-[var(--dark)] hover:text-[var(--primary)] transition-colors"
+                aria-label="Close menu"
+              >
+                <X size={24} />
+              </button>
+            </div>
+            
+            <nav className="mt-8">
+              <ul className="space-y-4">
+                {navLinks.map(link => (
+                  <li key={link.id}>
+                    <a 
+                      href={`#${link.id}`} 
+                      className={`text-lg ${activeSection === link.id ? 'text-[var(--primary)] font-medium' : 'text-[var(--dark)]'}`}
+                      onClick={toggleMenu}
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
         </div>
-        
-        <nav className="mt-8">
-          <ul className="space-y-4">
-            {navLinks.map(link => (
-              <li key={link.id}>
-                <a 
-                  href={`#${link.id}`} 
-                  className={`text-lg ${activeSection === link.id ? 'text-[var(--primary)] font-medium' : 'text-[var(--dark)]'}`}
-                  onClick={toggleMenu}
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </div>
+      )}
       
       {/* Scroll to top button */}
       <button 

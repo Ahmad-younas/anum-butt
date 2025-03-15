@@ -48,7 +48,7 @@ const Services: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h3 className="text-[var(--primary)] text-lg md:text-xl font-medium mb-2">My Services</h3>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 relative">What I Do</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 relative">What I Do for Clients</h2>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

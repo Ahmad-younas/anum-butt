@@ -15,21 +15,21 @@ const Testimonials: React.FC = () => {
       id: 1,
       name: 'John Smith',
       position: 'CEO, Tech Innovations',
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
+      //image: '/testimonial-1.jpg',
       text: 'Sarah transformed our online presence completely. Her attention to detail and creative approach resulted in a website that perfectly represents our brand and has significantly increased our conversion rates.'
     },
     {
       id: 2,
       name: 'Emily Johnson',
       position: 'Marketing Director, Bloom Retail',
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
+      //image: '/testimonial-2.jpg',
       text: 'Working with Sarah was a pleasure from start to finish. She took the time to understand our needs and delivered a solution that exceeded our expectations. Her technical skills and design sensibility are truly impressive.'
     },
     {
       id: 3,
       name: 'Michael Chen',
       position: 'Founder, Fitness First',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
+      //image: '/testimonial-3.jpg',
       text: 'The mobile app Sarah developed for our fitness studio has been a game-changer. It intuitive, beautifully designed, and our customers love it. Sarahs ongoing support has been exceptional as well.'
     }
   ];
@@ -57,8 +57,10 @@ const Testimonials: React.FC = () => {
               <p className="text-gray-700 mb-6">{testimonial.text}</p>
               <div className="flex items-center">
                 <Image
-                  src={testimonial.image} 
+                  src={"/testimonial.image"} 
                   alt={testimonial.name} 
+                  width={56}
+                  height={56}
                   className="w-14 h-14 rounded-full object-cover mr-4"
                 />
                 <div>
