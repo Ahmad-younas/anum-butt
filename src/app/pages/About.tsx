@@ -124,14 +124,14 @@ const About: React.FC = () => {
           </motion.div>
         </div>
         
-        <div className="mt-20">
+        {/* <div className="mt-20">
           <h3 className="mb-8 text-center text-[var(--primary)]">13 + Years of Experience</h3>
-          {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div> */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
           <div>
             <h1 className='text-6xl font-bold mb-4 text-center'>My Resume</h1>
           </div>
-           {/* <Resume/> */}
-        </div>
+           <Resume/>
+        </div> */}
       </div>
     </section>
   );
