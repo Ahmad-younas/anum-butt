@@ -130,7 +130,7 @@ const About: React.FC = () => {
           <div>
             <h1 className='text-6xl font-bold mb-4 text-center'>My Resume</h1>
           </div>
-           <Resume/>
+           {/* <Resume/> */}
         </div>
       </div>
     </section>
