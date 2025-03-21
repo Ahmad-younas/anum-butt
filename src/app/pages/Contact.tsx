@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { MapPin, Phone, Mail, Send } from 'lucide-react';
+import { MapPin, Mail, Send } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const [ref, inView] = useInView({
@@ -98,7 +98,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-bold mb-1">Email</h4>
-                  <p className="text-gray-700">anum.butt@example.com</p>
+                  <p className="text-gray-700">anum.butt15@gmail.com</p>
                 </div>
               </div>
             </div>

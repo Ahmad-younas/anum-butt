@@ -6,6 +6,7 @@ import Portfolio from "./pages/Porfolio";
 import Testimonials from "./pages/Testimonials";
 import Contact from "./pages/Contact";
 import Footer from "./pages/Footer";
+import Experience from "./pages/Experience";
 
 export default function Home() {
   return (
@@ -13,9 +14,10 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About/>
+      <Experience/>
       <Services/>
       <Portfolio/>
-      {/* <Testimonials/> */}
+      <Testimonials/>
       <Contact/>
       <Footer/>
     </div>

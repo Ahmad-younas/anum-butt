@@ -2,7 +2,7 @@
 import React, { ReactNode } from 'react';
 import { motion, useAnimation, animate } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Download, Award, Calendar, Briefcase } from 'lucide-react';
+import { Download, Award, Calendar, Briefcase, Building2,UsersRound   } from 'lucide-react';
 
 import Image from 'next/image';
 import Resume from './Resume';
@@ -50,6 +50,8 @@ const About: React.FC = () => {
     { icon: <Calendar size={24} />, value: '13', label: 'Years of Experience' },
     { icon: <Briefcase size={24} />, value: '100', label: 'Projects Completed' },
     { icon: <Award size={24} />, value: '15', label: 'Awards Received' },
+    { icon: <Building2 size={24} />, value: '25', label: 'Industries I Served' },
+    { icon: <UsersRound  size={24} />, value: '94', label: 'Customer Satisfaction' },
   ];
 
 
@@ -94,9 +96,9 @@ const About: React.FC = () => {
             transition={{ duration: 0.8 }}
             className='bg-[var(--about)] rounded-lg shadow-xl h-full p-3'
           >
-            <h3 className= {`xl:text-3xl md:text-2xl  font-bold mb-4`}>Hello, I&apos;m Anum Butt, Based in UK(London)</h3>
+            <h3 className= {`xl:text-3xl md:text-2xl  font-bold mb-4`}>Hello, I&apos;m Anum Butt, Based in UK, London</h3>
             <p className="text-gray-700 mb-6">
-            A seasoned and dynamic IT Professional with 12+ years of hands-on experience across software architecture, design, development, and production support. I have a solid track record of driving innovation and delivering high-impact solutions for a diverse range of clients, from startups to Fortune 500 companies. Known for my analytical mindset and attention to detail, I excel at enhancing end-user functionality and ensuring project accuracy from start to finish.
+            A seasoned and dynamic IT Professional with 13+ years of hands-on experience across software architecture, design, development, and production support. I have a solid track record of driving innovation and delivering high-impact solutions for a diverse range of clients, from startups to Fortune 500 companies. Known for my analytical mindset and attention to detail, I excel at enhancing end-user functionality and ensuring project accuracy from start to finish.
             </p>
             <p className="text-gray-700 mb-6">
             Whether leading complex projects or collaborating within teams, I&apos;m passionate about using technology to solve real-world problems and create scalable, efficient systems that deliver measurable results.

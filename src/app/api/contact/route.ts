@@ -4,7 +4,6 @@ import nodemailer from "nodemailer";
 export async function POST(req: Request) {
   try {
     const { name, email, subject, message } = await req.json();
-
     // Validate required fields
     if (!name || !email || !subject || !message) {
       return NextResponse.json(
