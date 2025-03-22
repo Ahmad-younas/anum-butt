@@ -46,7 +46,7 @@ const testimonials: Testimonial[] = [
     id: 5,
     name: 'Nick Drogo',
     position: 'Global Director IT',
-    image: '/Nick-Drogo.png',
+    image: '/Nick-Drogo.jpg',
     text: 'Anum completely transformed the way we manage our customer relationships. Their customized CRM system streamlined our processes and improved customer satisfaction. We highly recommend their services to any business looking for real results.'
   },
   {
