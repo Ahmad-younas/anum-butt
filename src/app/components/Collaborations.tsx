@@ -33,8 +33,8 @@ const firstRow = [
 
 const secondRow = [
   {
-    name: "Fingerprint",
-    logo: "/logos/fingerprint.png"
+    name: "Marki Tech",
+    logo: "/mktlogo.jpg"
   },
   {
     name: "Honeywell",
