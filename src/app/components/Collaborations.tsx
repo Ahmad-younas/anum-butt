@@ -6,28 +6,28 @@ import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 // Duplicate the rows to create seamless scrolling effect
 const firstRow = [
   {
-    name: "Groupon",
-    logo: "/logos/groupon.png"
+    name: "Product Madness",
+    logo: "/madness.jpg"
   },
   {
-    name: "Barclays",
-    logo: "/logos/barclays.png"
+    name: "FireExam",
+    logo: "/FireExam.png"
   },
   {
-    name: "NBCUniversal",
-    logo: "/logos/nbcuniversal.png"
+    name: "EMT",
+    logo: "/EMT.png"
   },
   {
-    name: "Cintas",
-    logo: "/logos/cintas.png"
+    name: "Aristocrat",
+    logo: "/aristocrat-1.jpg"
   },
   {
     name: "Knowles",
-    logo: "/logos/knowles.jpg"
+    logo: "/knowles.jpg"
   },
   {
     name: "Huawei",
-    logo: "/logos/huawei.jpg"
+    logo: "/huawei.jpg"
   }
 ];
 

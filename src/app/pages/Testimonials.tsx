@@ -41,26 +41,41 @@ const testimonials = [
     text: 'Anum completely transformed the way we manage our customer relationships. Their customized CRM system streamlined our processes and improved customer satisfaction. We highly recommend their services to any business looking for real results.'
   },
   
-  {
+  ,{
     id: 6,
+    name: 'Robert K Burger',
+    position: 'COO, Sterne Kessler',
+    image: '/RobertKBurger.jpg',
+    text: 'Anum helped us buid docketing app that features anintuitive user interface, allowing our attorneys to track over 10,000 U.S. and international patent systems'
+  },
+  {
+    id: 7,
     name: 'Umair Ahmed',
     position: '.Net Core | Blazor | MVC | Microservices | Azure | SQL | WPF | Architectures ',
     image: '/Umair.jpg',
     text: 'Anum is one of those resources that any manager would love to have in team. Technically very sound, self-motivated, hard working, responsible, meeting deadlines, quick learner, mentor, speaker and team leadership are few of her many qualities. Highly recommend her.'
   },
   {
-    id: 7,
+    id: 8,
     name: 'Muhammad Ali Ansari',
     position: 'Sr. Android Engineer at mobile.de GmbH',
     image: '/Ali.jpg',
     text: 'I had the pleasure of working with Anum Tariq, who has exceptional expertise in leadership, coaching and motivation. Foreseeing need of the hour, she collaborated in redesigning the course structure. Her hands-on approach to problem solving, management and positive attitude won her the respect of the staff and I hope she will be the most treasured resource to any platform that will hire her services.'
   },{
-    id: 8,
+    id: 9,
     name: 'Sameer Ahmad',
     position: 'Full Stack Developer | Former CTO',
     image: '/samer.jpg',
     text: 'Anum is an excellent mentor and counselor. I met her at Softech. She shared a great insight of how professional world is different from student life and provided me clarity regarding the career path I should follow.'
   },
+  {
+    id: 10,
+    name: 'mxvnxmvmvcxvx',
+    position: 'Technology Enthusiast',
+    image: '/1740279866293.jpg',
+    text: 'Amazing sense of responsibility and merit, eager to learn, passionate to code, sublime work ethics, works tirelessly and benevolent teammate.'
+  }
+  
 ];
 
 const TestimonialCard = ({ testimonial }: { testimonial: any }) => {
