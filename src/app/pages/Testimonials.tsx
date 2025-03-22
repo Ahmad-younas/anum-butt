@@ -31,7 +31,7 @@ const testimonials: Testimonial[] = [
   {
     id: 3,
     name: 'Tammany Petrie',
-    company: 'Everyday Heroes Kids',
+    position: 'Everyday Heroes Kids',
     image: '/Tammany.jpg',
     text: 'Anum is the engineering project manager for our platform and app. She has been incredible to work with; responsive, follows through on all details and has an excellent attitude. I would highly recommend Anum in any capacity.'
   },
