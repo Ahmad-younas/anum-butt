@@ -38,7 +38,7 @@ const services = [
   {
     title: "AI Agents",
     description: "We build AI agents that automate task, streamline operations & enhance customer experience.",
-    image: "/AI-Agent.jpg",
+    image: "/AI-agent.jpg",
     items: [
       "Automated Task Management",
       "Customer Service Bots",
@@ -50,7 +50,7 @@ const services = [
   {
     title: "Application Re-engineering",
     description: "Optimize systems performance, cloud adoption and UX through code modernization.",
-    image: "/Application-reengineering.jpg",
+    image: "/application-reengineering.jpg",
     items: [
       "Software Audit",
       "Quality Assurance",
@@ -61,7 +61,7 @@ const services = [
   {
     title: "Appliction Development",
     description: "Build or enhance digital products that are reliabale, high-perfomance, and designed to scale quickly.",
-    image: "/ApplicationDevelopment.jpg",
+    image: "/applicationDevelopment.jpg",
     items: [
       "Product Development",
       "Application Modernization",
