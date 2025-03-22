@@ -6,36 +6,39 @@ import { ArrowRight } from 'lucide-react';
 
 const services = [
   {
-    title: "Advisory",
-    description: "Navigate the complexities of digital technology with expert consultation.",
-    image: "/advisory.jpg",
+    title: "Cyber Security",
+    description: "Strengthen defense, future-proof against threats & ensure data security .",
+    image: "/CyberSecurity.jpg",
     items: [
-      "Discovery Workshop",
-      "Market Research",
-      "Technical Feasibility Study",
-      "Product Strategy",
-      "UI/UX Design",
-      "Digital Transformation"
+      "Network Security",
+      "Application Security",
+      "Cloud Security",
+      "Mobile Security",
+      "Digital Forensics",
+      "IoT Security",
+      "Security Operations",
+      "Cyber Risk Assessment",
+      
     ]
   },
   {
-    title: "Engineering",
-    description: "Transform your ideas into reality with cutting-edge engineering expertise.",
-    image: "/engineering.jpg",
+    title: "Artificial Intelligence",
+    description: "Leverage AI to gain insights, automate processes & drive growth and innovation.",
+    image: "/ArtificialIntelligence.jpg",
     items: [
-      "Product Development",
-      "Application Development",
-      "Application Modernization",
-      "POC Development",
-      "AI Software Development",
-      "Cloud Engineering",
-      "Cloud Migration"
+      "AI Incubator",
+      "AI Transformation solution and Service",
+      "AI POC & MVP ",
+      "MLOps",
+      "Generative AI",
+      "Conversational AI",
+      "Machine Learning",
     ]
   },
   {
     title: "AI Agents",
-    description: "Transform your business into a high-performance engine by deploying AI agents that automate repetitive tasks.",
-    image: "/ai-service.jpg",
+    description: "We build AI agents that automate task, streamline operations & enhance customer experience.",
+    image: "/AI-Agent.jpg",
     items: [
       "Automated Task Management",
       "Customer Service Bots",
@@ -45,9 +48,9 @@ const services = [
     ]
   },
   {
-    title: "Optimization",
-    description: "Maximize your software's efficiency and reliability with our optimization services.",
-    image: "/optimization.jpg",
+    title: "Application Re-engineering",
+    description: "Optimize systems performance, cloud adoption and UX through code modernization.",
+    image: "/Application-reengineering.jpg",
     items: [
       "Software Audit",
       "Quality Assurance",
@@ -56,28 +59,27 @@ const services = [
     ]
   },
   {
-    title: "Business Enablement",
-    description: "Boost your operations with comprehensive business solutions.",
-    image: "/business.jpg",
+    title: "Appliction Development",
+    description: "Build or enhance digital products that are reliabale, high-perfomance, and designed to scale quickly.",
+    image: "/ApplicationDevelopment.jpg",
     items: [
-      "Accounts & Finance",
-      "HR & Recruitment",
-      "Digital Marketing & Branding"
+      "Product Development",
+      "Application Modernization",
+      "POC Development",
+      "AI Software Development",
+      "Cloud Engineering",
+      "Cloud Migration"
     ]
   },
   {
-    title: "Expertise",
+    title: "Advisory",
     description: "Tap into our extensive expertise in emerging technologies.",
-    image: "/expertise.jpg",
+    image: "/Advisory.jpg",
     items: [
-      "UX Design",
-      "RPA",
-      "DevOps",
-      "Internet of Things",
-      "Blockchain",
-      "AR/VR/MR",
-      "Data Science",
-      "Cybersecurity"
+      "Technical Feasibility Study",
+      "Product Strategy",
+      "Solution Architecture",
+      "Software Architecture",
     ]
   }
 ];
@@ -88,58 +90,48 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="relative h-[400px] group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
+      className="group relative h-[400px] rounded-xl overflow-hidden cursor-pointer"
     >
-      {/* Content Section */}
-      <div className="relative z-10 h-full p-10 flex flex-col">
-        <div>
-          <div className="w-12 h-1 bg-[var(--primary)] mb-6 group-hover:bg-white transition-colors duration-500" />
-          <h3 className="text-4xl font-bold text-gray-900 mb-6 group-hover:text-white transition-colors duration-500">
-            {service.title}
-          </h3>
-          <p className="text-gray-600 text-lg leading-relaxed group-hover:text-white/90 transition-colors duration-500">
-            {service.description}
-          </p>
-        </div>
-
-        {/* Child Topics that slide up with the image */}
-        <div className="mt-auto transform translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500 ease-out">
-          <h4 className="text-white font-semibold mb-4 text-xl">Services</h4>
-          <div className="space-y-3">
-            {service.items.map((item: string, idx: number) => (
-              <div 
-                key={idx}
-                className="flex items-center gap-2 text-white/90 hover:text-white transition-colors group/item"
-              >
-                <ArrowRight className="w-4 h-4 transform group-hover/item:translate-x-1 transition-transform" />
-                <span>{item}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Image that slides up */}
-      <div 
-        className="absolute inset-0 transform translate-y-[65%] group-hover:translate-y-0 transition-transform duration-500 ease-out"
-        style={{
-          background: 'linear-gradient(to top, rgb(0 0 0 / 0.9), rgb(0 0 0 / 0.75))',
-        }}
-      >
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0">
         <Image
           src={service.image}
           alt={service.title}
           layout="fill"
           objectFit="cover"
-          className="opacity-60 -z-10"
+          className="transition-transform duration-700 group-hover:scale-110"
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/30" />
       </div>
 
-      {/* Gradient overlay */}
-      <div 
-        className="absolute inset-0 bg-gradient-to-b from-white via-white to-transparent group-hover:opacity-0 transition-opacity duration-500"
-        style={{ height: '65%' }}
-      />
+      {/* Initial Content - Hides on Hover */}
+      <div className="relative h-full p-8 flex flex-col justify-end transform transition-all duration-500 group-hover:translate-y-full">
+        <div>
+          <div className="w-12 h-1 bg-[var(--primary)] mb-6" />
+          <h3 className="text-3xl font-bold text-white mb-4">
+            {service.title}
+          </h3>
+          <p className="text-white/80 text-lg">
+            {service.description}
+          </p>
+        </div>
+      </div>
+
+      {/* Services List - Shows on Hover */}
+      <div className="absolute inset-0 p-8 flex flex-col justify-center transform translate-y-full group-hover:translate-y-0 transition-all duration-500">
+        <h3 className="text-2xl font-bold text-white mb-6">{service.title}</h3>
+        <div className="space-y-3">
+          {service.items.map((item: string, idx: number) => (
+            <div 
+              key={idx}
+              className="flex items-center gap-3 text-white/90 hover:text-white group/item"
+            >
+              <ArrowRight className="w-5 h-5 text-[var(--primary)] transform group-hover/item:translate-x-1 transition-transform" />
+              <span className="text-sm">{item}</span>
+            </div>
+          ))}
+        </div>
+      </div>
     </motion.div>
   );
 };
@@ -155,9 +147,9 @@ export default function Services() {
           className="text-center mb-16"
         >
           <h3 className="text-[var(--primary)] text-lg md:text-xl font-medium mb-2">Our Services</h3>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">We Engineer Software Solutions</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">I Engineer Software Solutions</h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            We help you envision technology that powers the future of your business
+            I help you envision technology that powers the future of your business
           </p>
         </motion.div>
 

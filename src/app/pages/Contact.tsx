@@ -88,7 +88,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-bold mb-1">Location</h4>
-                  <p className="text-gray-700">London, UK</p>
+                  <p className="text-gray-700">UK, London</p>
                 </div>
               </div>
 
@@ -98,7 +98,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-bold mb-1">Email</h4>
-                  <p className="text-gray-700">anum.butt15@gmail.com</p>
+                  <p className="text-gray-700">anumbutt15@gmail.com</p>
                 </div>
               </div>
             </div>

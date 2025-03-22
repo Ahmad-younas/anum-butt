@@ -1,50 +1,54 @@
 "use client"
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, MapPin, Building2, ArrowUpRight } from 'lucide-react';
+import { Play } from 'lucide-react';
+import Image from 'next/image';
 
 const experiences = [
   {
-    title: "Senior Software Engineer",
-    company: "Tech Innovators Ltd",
-    location: "London, UK",
-    period: "2020 - Present",
-    description: "Leading development of enterprise-scale applications and microservices architecture.",
-    achievements: [
-      "Spearheaded the migration of legacy systems to modern cloud architecture",
-      "Implemented AI-driven features resulting in 40% efficiency improvement",
-      "Mentored junior developers and established best practices",
-      "Led a team of 8 developers across multiple projects"
-    ],
-    technologies: ["React", "Node.js", "AWS", "Docker", "MongoDB"]
+    title: "The Rise of Multi-Cloud Strategies",
+    name: "Jonathan Donaldson",
+    role: "CTO",
+    company: "Google",
+    image: "/anumbutt.jpeg", // Replace with actual image
+    description: "Leading the transformation of cloud infrastructure and developing innovative solutions for enterprise-scale applications. Expertise in multi-cloud architecture and strategic technology implementation.",
+    topics: [
+      "Cloud Infrastructure Evolution",
+      "Multi-Cloud Strategy Development",
+      "Enterprise Architecture",
+      "Digital Transformation",
+      "Cloud Native Solutions"
+    ]
   },
   {
-    title: "Full Stack Developer",
-    company: "Digital Solutions Inc",
-    location: "Manchester, UK",
-    period: "2018 - 2020",
-    description: "Developed and maintained full-stack web applications for enterprise clients.",
-    achievements: [
-      "Reduced application load time by 60% through optimization",
-      "Implemented automated testing reducing bugs by 45%",
-      "Developed real-time analytics dashboard for client reporting",
-      "Integrated multiple third-party APIs and payment systems"
-    ],
-    technologies: ["Angular", "Python", "PostgreSQL", "Redis", "GCP"]
+    title: "Future of Cloud Computing",
+    name: "Sarah Mitchell",
+    role: "Cloud Architect",
+    company: "Microsoft",
+    image: "/anumbutt.jpeg", // Replace with actual image
+    description: "Pioneering cloud-native solutions and implementing cutting-edge technologies for scalable enterprise applications.",
+    topics: [
+      "Cloud Native Architecture",
+      "Serverless Computing",
+      "DevOps Transformation",
+      "Microservices Design",
+      "Container Orchestration"
+    ]
   },
   {
-    title: "Software Developer",
-    company: "Innovation Labs",
-    location: "Birmingham, UK",
-    period: "2016 - 2018",
-    description: "Focused on building scalable web applications and RESTful APIs.",
-    achievements: [
-      "Built and deployed 15+ customer-facing applications",
-      "Improved database query performance by 75%",
-      "Implemented CI/CD pipeline reducing deployment time",
-      "Developed mobile-first responsive designs"
-    ],
-    technologies: ["Vue.js", "Laravel", "MySQL", "Jenkins", "Azure"]
+    title: "AI in Cloud Infrastructure",
+    name: "David Chen",
+    role: "AI Solutions Architect",
+    company: "Amazon Web Services",
+    image: "/anumbutt.jpeg", // Replace with actual image
+    description: "Integrating AI capabilities into cloud infrastructure and developing intelligent solutions for enterprise needs.",
+    topics: [
+      "AI Integration",
+      "Machine Learning Operations",
+      "Intelligent Infrastructure",
+      "Automated Cloud Management",
+      "AI-Driven Security"
+    ]
   }
 ];
 
@@ -54,82 +58,77 @@ const ExperienceCard = ({ experience, index }: { experience: any; index: number 
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500"
+      className="group relative h-[400px] rounded-3xl overflow-hidden cursor-pointer"
     >
-      {/* Company and Title Section */}
-      <div className="mb-6">
-        <h3 className="text-2xl font-bold text-gray-900 group-hover:text-[var(--primary)] transition-colors duration-300">
-          {experience.title}
-        </h3>
-        <div className="flex items-center gap-2 mt-2">
-          <Building2 className="w-4 h-4 text-[var(--primary)]" />
-          <span className="text-gray-600">{experience.company}</span>
-        </div>
-        <div className="flex items-center gap-2 mt-1">
-          <MapPin className="w-4 h-4 text-[var(--primary)]" />
-          <span className="text-gray-600">{experience.location}</span>
-        </div>
-        <div className="flex items-center gap-2 mt-1">
-          <Calendar className="w-4 h-4 text-[var(--primary)]" />
-          <span className="text-gray-600">{experience.period}</span>
-        </div>
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0">
+        <Image
+          src={experience.image}
+          alt={experience.name}
+          layout="fill"
+          objectFit="cover"
+          className="transition-transform duration-700 group-hover:scale-110"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/30" />
       </div>
 
-      {/* Description */}
-      <p className="text-gray-700 mb-6">
-        {experience.description}
-      </p>
+      {/* Content */}
+      <div className="relative h-full p-8 flex flex-col justify-between text-white">
+        {/* Top Section */}
+        <div>
+          <div className="flex items-center gap-2 mb-4">
+            <span className="text-sm font-medium opacity-80">{experience.company}</span>
+          </div>
+          <h3 className="text-3xl font-bold mb-2">{experience.role}</h3>
+          <h4 className="text-xl font-semibold">{experience.name}</h4>
+        </div>
 
-      {/* Achievements */}
-      <div className="mb-6">
-        <h4 className="text-lg font-semibold text-gray-900 mb-3">Key Achievements</h4>
-        <ul className="space-y-2">
-          {experience.achievements.map((achievement: string, idx: number) => (
-            <li key={idx} className="flex items-start gap-2 group/item">
-              <ArrowUpRight className="w-5 h-5 text-[var(--primary)] mt-1 group-hover/item:rotate-45 transition-transform duration-300" />
-              <span className="text-gray-700">{achievement}</span>
-            </li>
-          ))}
-        </ul>
+        {/* Title and Play Button */}
+        <div className="flex items-end justify-between">
+          <h2 className="text-2xl font-bold max-w-[80%] transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+            {experience.title}
+          </h2>
+          <div className="bg-[#00DC89] rounded-full p-3 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+            <Play className="w-6 h-6 text-black" />
+          </div>
+        </div>
+
+        {/* Topics that appear on hover */}
+        <div className="absolute inset-0 p-8 bg-black/80 flex flex-col justify-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+          <h3 className="text-2xl font-bold mb-6">{experience.title}</h3>
+          <p className="text-gray-300 mb-6">{experience.description}</p>
+          <div className="space-y-3">
+            {experience.topics.map((topic: string, idx: number) => (
+              <div key={idx} className="flex items-center gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#00DC89]" />
+                <span className="text-white/90">{topic}</span>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
-
-      {/* Technologies */}
-      <div className="flex flex-wrap gap-2">
-        {experience.technologies.map((tech: string, idx: number) => (
-          <span
-            key={idx}
-            className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-[var(--primary)] hover:text-white transition-colors duration-300"
-          >
-            {tech}
-          </span>
-        ))}
-      </div>
-
-      {/* Decorative Elements */}
-      <div className="absolute top-0 left-0 w-2 h-full bg-[var(--primary)] rounded-l-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-      <div className="absolute -inset-0.5 bg-gradient-to-r from-[var(--primary)] to-blue-600 rounded-2xl opacity-0 group-hover:opacity-10 transition-opacity duration-500 -z-10" />
     </motion.div>
   );
 };
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-20 md:py-28 bg-gray-50">
-      <div className="container mx-auto px-4 max-w-6xl">
+    <section id="experience" className="py-20 md:py-28 bg-black">
+      <div className="container mx-auto px-4 max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h3 className="text-[var(--primary)] text-lg md:text-xl font-medium mb-2">Professional Journey</h3>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Work Experience</h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Over 13 years of experience in delivering innovative software solutions and driving digital transformation
+          <h3 className="text-[#00DC89] text-lg md:text-xl font-medium mb-2">Featured Talks</h3>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">Technology Leadership</h2>
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            Insights and experiences from industry leaders shaping the future of technology
           </p>
         </motion.div>
 
-        <div className="space-y-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {experiences.map((experience, index) => (
             <ExperienceCard key={index} experience={experience} index={index} />
           ))}

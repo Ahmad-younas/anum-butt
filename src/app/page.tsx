@@ -1,3 +1,4 @@
+import React from 'react';
 import Navbar from "./pages/Navbar";
 import Hero from "./pages/Hero";
 import About from "./pages/About";
@@ -7,6 +8,7 @@ import Testimonials from "./pages/Testimonials";
 import Contact from "./pages/Contact";
 import Footer from "./pages/Footer";
 import Experience from "./pages/Experience";
+import Collaborations from '@/app/components/Collaborations';
 
 export default function Home() {
   return (
@@ -14,9 +16,10 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About/>
-      <Experience/>
+      <Collaborations />
+      {/* <Experience/> */}
       <Services/>
-      <Portfolio/>
+      {/* <Portfolio/> */}
       <Testimonials/>
       <Contact/>
       <Footer/>
