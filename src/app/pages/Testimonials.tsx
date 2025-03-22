@@ -4,7 +4,16 @@ import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 
-const testimonials = [
+interface Testimonial {
+  id: number;
+  name: string;
+  position?: string;
+  company?: string;
+  image: string;
+  text: string;
+}
+
+const testimonials: Testimonial[] = [
   {
     id: 1,
     name: 'Rostislav Morozov',
@@ -40,8 +49,7 @@ const testimonials = [
     image: '/Nick-Drogo.png',
     text: 'Anum completely transformed the way we manage our customer relationships. Their customized CRM system streamlined our processes and improved customer satisfaction. We highly recommend their services to any business looking for real results.'
   },
-  
-  ,{
+  {
     id: 6,
     name: 'Robert K Burger',
     position: 'COO, Sterne Kessler',
@@ -61,7 +69,8 @@ const testimonials = [
     position: 'Sr. Android Engineer at mobile.de GmbH',
     image: '/Ali.jpg',
     text: 'I had the pleasure of working with Anum Tariq, who has exceptional expertise in leadership, coaching and motivation. Foreseeing need of the hour, she collaborated in redesigning the course structure. Her hands-on approach to problem solving, management and positive attitude won her the respect of the staff and I hope she will be the most treasured resource to any platform that will hire her services.'
-  },{
+  },
+  {
     id: 9,
     name: 'Sameer Ahmad',
     position: 'Full Stack Developer | Former CTO',
@@ -73,12 +82,11 @@ const testimonials = [
     name: 'mxvnxmvmvcxvx',
     position: 'Technology Enthusiast',
     image: '/1740279866293.jpg',
-    text: 'Amazing sense of responsibility and merit, eager to learn, passionate to code, sublime work ethics, works tirelessly and benevolent teammate.'
+    text: 'Amazing sense of responsibility and merit, eager to learn, passionate to code, sublime work ethics, works tirelessly and benevolent teammate.'
   }
-  
 ];
 
-const TestimonialCard = ({ testimonial }: { testimonial: any }) => {
+const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
