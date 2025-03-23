@@ -28,6 +28,14 @@ const firstRow = [
   {
     name: "Huawei",
     logo: "/huawei.jpg"
+  },
+  {
+    name: "TCS",
+    logo: "/TCS.png"
+  },
+  {
+    name: "everydaykids",
+    logo: "/everydayKids.png"
   }
 ];
 
@@ -37,20 +45,28 @@ const secondRow = [
     logo: "/mktlogo.jpg"
   },
   {
-    name: "Honeywell",
-    logo: "/logos/honeywell.png"
+    name: "tkxel",
+    logo: "/tkxel.jpg"
   },
   {
-    name: "Replenium",
-    logo: "/logos/replenium.png"
+    name: "Vopium",
+    logo: "/Vopium.png"
   },
   {
-    name: "Moment.ai",
-    logo: "/logos/moment-ai.png"
+    name: "Exitile",
+    logo: "/Exitile.jpg"
   },
   {
-    name: "Lumatax",
-    logo: "/logos/lumatax.png"
+    name: "Code3App",
+    logo: "/Code3App.png"
+  },
+  {
+    name: "Skgf",
+    logo: "/Skgf.png"
+  },
+  {
+    name: "sensight",
+    logo: "/sensight.png"
   }
 ];
 
